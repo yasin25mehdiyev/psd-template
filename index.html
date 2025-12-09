@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watsons - Beauty & Personal Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'watsons-green': '#00a651',
+                        'watsons-teal': '#0d9488',
+                        'watsons-pink': '#e91e8c',
+                        'watsons-dark': '#1a1a2e',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+
+    <!-- MOBILE SLIDE MENU -->
+    <div id="mobileMenuWrapper" class="fixed inset-0 z-[999] hidden">
+
+        <!-- OVERLAY -->
+        <div id="menuOverlay" class="absolute inset-0 bg-black/40"></div>
+
+        <!-- MENU PANEL -->
+        <div id="mobileMenu" class="absolute left-0 top-0 h-full w-full
+           bg-white -translate-x-full transition-transform duration-300
+           flex flex-col">
+
+            <!-- HEADER -->
+            <div class="flex items-center px-5 py-4 border-b bg-[#F2F0FF]">
+                <button id="menuClose">
+                    <i class="fas fa-times text-2xl text-gray-700"></i>
+                </button>
+
+                <span class="ml-auto text-[22px] font-semibold text-gray-900">
+                    Menu
+                </span>
+            </div>
+
+
+            <!-- NAV -->
+            <nav class="flex-1 overflow-hidden relative">
+
+                <!-- LEVEL 1 -->
+                <ul id="menuLevel1" class="absolute inset-0 flex flex-col divide-y
+         text-base font-medium text-gray-800
+         transition-transform duration-300">
+
+                    <li data-key="campaigns" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Campaigns</span>
+                        </button>
+                    </li>
+
+                    <li data-key="personal" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Personal Care</span>
+                        </button>
+                    </li>
+
+                    <li data-key="skin" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Skin Care</span>
+                        </button>
+                    </li>
+
+                    <li data-key="makeup" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Make-Up</span>
+                        </button>
+                    </li>
+
+                    <li data-key="mother" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Mother & Baby</span>
+                        </button>
+                    </li>
+
+                    <li data-key="healthy" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Healthy Life</span>
+                        </button>
+                    </li>
+
+                    <li data-key="brands" class="menu-item">
+                        <button class="w-full flex items-center px-6 py-5">
+                            <i class="fas fa-chevron-left text-gray-400"></i>
+                            <span class="ml-auto text-lg">Brands</span>
+                        </button>
+                    </li>
+
+                </ul>
+
+                <!-- LEVEL 2 -->
+                <div id="menuLevel2" class="absolute inset-0 bg-white translate-x-full
+               transition-transform duration-300">
+
+                    <!-- SUB HEADER -->
+                    <div class="flex items-center gap-3 px-5 py-4 bg-[#ECECEC4D] border-b">
+                        <button id="submenuBack">
+                            <i class="fas fa-chevron-left text-gray-700"></i>
+                        </button>
+                        <span id="submenuTitle" class="ml-auto font-semibold text-gray-800"></span>
+                        <div class="w-6"></div>
+                    </div>
+
+                    <!-- SUB ITEMS -->
+                    <ul id="submenuItems" class="flex flex-col px-4 py-2
+                 text-base text-gray-700">
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- FOOTER -->
+            <div class="border-t divide-y text-gray-700 text-sm">
+                <div class="flex items-center justify-between px-6 py-4">
+                    <span>My profile</span>
+                    <i class="far fa-user"></i>
+                </div>
+                <div class="flex items-center justify-between px-6 py-4">
+                    <span>Order history</span>
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <div class="flex items-center justify-between px-6 py-4">
+                    <span>Help center</span>
+                    <i class="far fa-question-circle"></i>
+                </div>
+                <div class="flex items-center justify-between px-6 py-4">
+                    <span>Log out</span>
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Top Bar -->
+    <div class="bg-watsons-dark text-white text-sm py-2">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-3 md:gap-6">
+                <a href="#" class="flex items-center gap-1 md:gap-2 hover:text-gray-300">
+                    <i class="fas fa-store"></i>
+                    <span class="hidden sm:inline">Stores</span>
+                </a>
+                <a href="#" class="flex items-center gap-1 md:gap-2 hover:text-gray-300">
+                    <i class="far fa-newspaper"></i>
+                    <span class="hidden sm:inline">Catalog</span>
+                </a>
+            </div>
+            <p class="hidden lg:block text-gray-300 text-xs xl:text-sm">Watsons Beauty and Personal Care Awards
+                Nominees!</p>
+            <a href="tel:+908501234567" class="flex items-center gap-2 hover:text-gray-300 text-xs sm:text-sm">
+                <span class="hidden sm:inline">Call us:</span>
+                <span class="hidden md:inline">(+90) 850 123 45 67</span>
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="py-3 md:py-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-2 md:gap-4 lg:gap-8">
+            <!-- Mobile Menu Button -->
+            <button id="menuOpen" class="lg:hidden text-gray-600 text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+
+            <!-- Logo -->
+            <div
+                class="bg-watsons-teal text-white font-bold text-lg md:text-xl lg:text-2xl px-3 md:px-4 lg:px-6 py-1.5 md:py-2 rounded-full italic whitespace-nowrap">
+                watsons
+            </div>
+
+            <!-- Search Bar -->
+            <div class="hidden md:block flex-1 max-w-xl lg:max-w-2xl">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Write the product or category you are looking for"
+                        class="w-full pl-12 pr-4 py-2 lg:py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm lg:text-base">
+                </div>
+            </div>
+
+            <!-- Mobile Search Icon -->
+            <button class="md:hidden text-gray-600 text-xl">
+                <i class="fas fa-search"></i>
+            </button>
+
+            <!-- User & Cart -->
+            <div class="flex items-center gap-2 md:gap-4">
+                <div class="hidden sm:flex items-center gap-2">
+                    <span class="hidden lg:inline text-gray-600 text-sm">Hello,</span>
+                    <span class="font-semibold text-sm lg:text-base">Clara</span>
+                    <img src="./image/user.jpg" alt="User" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover">
+                    <i class="hidden lg:inline fas fa-chevron-down text-gray-400 text-sm"></i>
+                </div>
+                <!-- Mobile User Icon -->
+                <button class="sm:hidden text-gray-600 text-xl">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="relative">
+                    <a href="checkout.html" class="relative inline-block">
+                        <i class="fas fa-shopping-cart text-xl lg:text-2xl text-gray-600"></i>
+
+                        <span class="absolute -top-2 -right-2 bg-watsons-pink text-white
+               text-xs w-4 h-4 lg:w-5 lg:h-5
+               rounded-full flex items-center justify-center">
+                            2
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden px-4 mt-3">
+            <div class="relative">
+                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" placeholder="Search products..."
+                    class="w-full pl-12 pr-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="hidden md:block border-b-4 border-watsons-teal">
+        <div class="max-w-7xl mx-auto px-4">
+            <ul
+                class="flex items-center gap-4 md:gap-6 lg:justify-between py-3 md:py-4 text-xs md:text-sm font-medium text-gray-700 whitespace-nowrap min-w-max lg:min-w-0">
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">CAMPAIGNS</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">PERSONAL CARE</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">SKIN CARE</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">MAKE - UP</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">MOTHER & BABY</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">MEN CARE</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">HEALTHY LIFE</a></li>
+                <li><a href="#" class="hover:text-watsons-teal transition-colors">BRANDS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Slider -->
+    <!-- Made hero section stack vertically on mobile -->
+    <section class="bg-gray-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 relative">
+
+            <!-- LEFT ARROW -->
+            <button class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30
+                   w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                   text-gray-400 hover:text-gray-600">
+                <i class="fas fa-chevron-left text-xl md:text-2xl"></i>
+            </button>
+
+            <!-- RIGHT ARROW -->
+            <button class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30
+                   w-8 h-8 md:w-10 md:h-10 flex items-center justify-center
+                   text-gray-400 hover:text-gray-600">
+                <i class="fas fa-chevron-right text-xl md:text-2xl"></i>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 px-6 md:px-10">
+
+                <!-- LEFT TEXT -->
+                <div class="text-center md:text-left order-2 md:order-1">
+                    <p class="text-watsons-teal font-medium mb-3 text-sm md:text-base">
+                        NATURALS BY WATSONS
+                    </p>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-5">
+                        The new 2021 collection
+                    </h1>
+
+                    <p class="text-gray-600 mb-8 leading-relaxed text-base max-w-xl mx-auto md:mx-0">
+                        Known as "the miracle plant", Aloe Vera helps to nourish, moisturize
+                        and keep the hair looking smooth. Let your hair be flexible and fresh.
+                    </p>
+
+                    <button class="bg-watsons-pink text-white px-8 py-3.5 rounded-lg
+                       font-semibold hover:bg-pink-600 transition">
+                        SHOP NOW
+                    </button>
+
+                    <div class="flex items-center justify-center md:justify-start gap-2 mt-10">
+                        <span class="w-3 h-3 rounded-full bg-gray-800"></span>
+                        <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                        <span class="w-3 h-3 rounded-full bg-gray-300"></span>
+                    </div>
+                </div>
+
+                <!-- RIGHT VISUAL -->
+                <div class="relative order-1 md:order-2 flex justify-center md:justify-end">
+                    <div class="relative
+                    w-[320px] h-[320px]
+                    sm:w-[360px] sm:h-[360px]
+                    md:w-[420px] md:h-[420px]">
+
+                        <!-- BACKGROUND CIRCLE -->
+                        <div class="absolute inset-0 bg-teal-100 rounded-full opacity-60 z-0"></div>
+
+                        <!-- BIG LEAF -->
+                        <img src="./image/banner/tree.png" class="absolute top-[-4%] left-[-50%]
+                   w-[100px] sm:w-[250px] md:w-[350px]
+                   z-10" alt="" />
+
+
+
+                        <!-- OIL DETAIL -->
+                        <!-- LEFT PRODUCT -->
+                        <img src="./image/banner/oil1.png" class="
+    absolute
+    bottom-[2%] left-[4%]
+    h-[170px] sm:h-[200px] md:h-[225px]
+    z-30
+  " alt="" />
+
+                        <!-- MAIN PRODUCT -->
+                        <img src="./image/banner/oil2.png" class="
+    absolute
+    bottom-[2%] left-1/2 -translate-x-[70%]
+    h-[260px] sm:h-[300px] md:h-[330px]
+    z-40
+  " alt="" />
+
+                        <img src="./image/banner/oil3.png" class="
+    absolute
+    bottom-[2%] left-1/2 translate-x-[10%]
+    h-[300px] sm:h-[345px] md:h-[380px]
+    z-50
+  " alt="" />
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Featured Products -->
+    <!-- Made products grid responsive with 1-2-4 columns -->
+    <section class="py-10 md:py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Section Title -->
+            <div class="flex items-center justify-center mb-8 md:mb-12">
+                <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
+                <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">Featured products</h2>
+                <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+                <!-- Product 1 -->
+                <div
+                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
+                    <div class="relative">
+                        <img src="./image/product/product1.png" alt="Herbal Science Boom Butter"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                        <!-- Hover Buttons -->
+                        <div
+                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
+                                <i class="far fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button
+                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">44,95 TL</p>
+                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Herbal Science Boom Butter Hair Care Oil
+                        190 ml</p>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
+                    <div class="relative">
+                        <img src="./image/product/product2.png" alt="Diadermine Lift Serum"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                        <!-- Hover Buttons -->
+                        <div
+                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
+                                <i class="far fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button
+                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">42,25 TL</p>
+                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Diadermine Lift + Serum Booster Vitamin C
+                    </p>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
+                    <div class="relative">
+                        <img src="./image/product/product3.png" alt="Ashley Joy Shampoo"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                        <!-- Hover Buttons -->
+                        <div
+                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
+                                <i class="far fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button
+                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">29,45 TL</p>
+                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Ashley Joy Strengthening Shampoo 400ml</p>
+                </div>
+
+                <!-- Product 4 -->
+                <div
+                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
+                    <div class="relative">
+                        <img src="./image/product/product4.png" alt="Herbal Extract Shampoo"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                        <!-- Hover Buttons -->
+                        <div
+                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <button
+                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
+                                <i class="far fa-eye"></i>
+                                Quick View
+                            </button>
+                            <button
+                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">28,95 TL</p>
+                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Herbal Extract Refreshing Shampoo 400ml</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-8 md:py-12 bg-[#F2F0FF]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="text-center md:text-left">
+                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Sign up to our newsletter</h3>
+                    <p class="text-gray-500 text-sm md:text-base">Be the first to hear about the latest offers.</p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                    <input type="email" placeholder="Your email address"
+                        class="w-full sm:w-72 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-watsons-teal text-sm">
+                    <button
+                        class="bg-watsons-pink text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-600 transition-colors whitespace-nowrap text-sm md:text-base">
+                        SUBSCRIBE
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NIVEA Promo Banner -->
+    <section class="relative overflow-hidden bg-[#bfe4ea]">
+       <div
+    class="absolute inset-0
+           bg-[url('/image/overlay.png')]
+           bg-cover bg-center bg-no-repeat
+           z-0">
+  </div>
+
+        <div class="relative max-w-[1400px] mx-auto px-4 py-12 md:py-16">
+            <div class="relative isolate min-h-[320px] md:min-h-[460px]">
+
+                <!-- LEFT IMAGE -->
+                <img src="./image/banner/nivea.png" alt="Nivea deodorants" class="
+          hidden md:block
+          absolute left-[20px] lg:left-[40px]
+          top-1/2 -translate-y-1/2
+          h-[220px] lg:h-[320px] xl:h-[380px]
+          z-10 pointer-events-none
+        " />
+
+                <!-- CENTER CARD -->
+                <div class="
+          absolute left-1/2 top-1/2
+          -translate-x-1/2 md:-translate-x-[35%]
+          -translate-y-1/2
+          bg-white rounded-[28px]
+          px-8 md:px-12
+          py-10 md:py-14
+          max-w-[320px] md:max-w-md
+          shadow-[0_24px_70px_rgba(0,0,0,0.18)]
+          z-20 text-center md:text-left
+        ">
+                    <p class="text-blue-900 text-xs md:text-sm font-semibold uppercase tracking-wide">
+                        EN SEVDİYİNİZ ÜRÜNLƏR
+                    </p>
+
+                    <h2 class="text-blue-900 font-extrabold text-[22px] md:text-[26px] leading-tight mt-2">
+                        TEK TIKLA KAPINIZDA!
+                    </h2>
+
+                    <div class="mt-6 md:mt-8">
+                        <p class="text-blue-900 font-extrabold text-[64px] md:text-[88px] leading-none">
+                            60%
+                        </p>
+                        <p class="text-blue-900 font-extrabold text-[28px] md:text-[36px] -mt-2">
+                            DISCOUNT
+                        </p>
+                    </div>
+
+                    <button class="
+            mt-6 md:mt-8
+            bg-teal-500 hover:bg-teal-600
+            text-white px-8 md:px-10 py-3
+            rounded-md font-semibold uppercase
+            shadow-lg transition
+          ">
+                        SHOP NOW
+                    </button>
+                </div>
+
+                <!-- RIGHT IMAGE -->
+                <img src="./image/banner/niveaBanner.png" alt="Nivea products" class="
+          hidden sm:block
+          absolute right-[20px] lg:right-[40px]
+          top-1/2 -translate-y-1/2
+          h-[260px] md:h-[340px] lg:h-[400px] xl:h-[440px]
+          z-30 pointer-events-none
+        " />
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Featured Categories Section -->
+<section class="py-10 md:py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Section title -->
+    <div class="flex items-center justify-center mb-8 md:mb-12">
+      <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
+      <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">
+        Featured categories
+      </h2>
+      <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+
+      <!-- CARD -->
+      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+
+        <!-- IMAGE -->
+        <img
+          src="./image/backgrounds/bg1.jpg"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+        >
+
+        <!-- ✅ SIMPLE BLACK OVERLAY -->
+        <div
+          class="absolute inset-0
+                 bg-black/0
+                 group-hover:bg-black/50
+                 transition-colors duration-300">
+        </div>
+
+        <!-- CONTENT -->
+        <div
+          class="absolute inset-0 flex items-center justify-center
+                 opacity-100 md:opacity-0 md:group-hover:opacity-100
+                 transition-opacity duration-300">
+
+          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+              Personal Care
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Lorem ipsum dolor sit amet consectetur elit aliquam
+            </p>
+            <button
+              class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm hover:bg-teal-700 transition">
+              BROWSE
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+        <img src="./image/backgrounds/bg2.jpg"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Skin Care</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
+            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+        <img src="./image/backgrounds/bg3.jpg"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Make-Up</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
+            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+        <img src="./image/backgrounds/bg4.jpg"
+             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+
+        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center
+                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
+          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
+            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Mother & Baby</h3>
+            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
+            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-50 pt-12 md:pt-16">
+        <div class="max-w-7xl mx-auto px-4">
+
+            <!-- MOBILE FOOTER ACCORDION -->
+            <div class="md:hidden divide-y border-t border-gray-200">
+
+                <!-- CORPORATE -->
+                <div>
+                    <button
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        CORPORATE
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Human resources</a></li>
+                        <li><a href="#">News from us</a></li>
+                    </ul>
+                </div>
+
+                <!-- SHOPPING -->
+                <div>
+                    <button
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        SHOPPING
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                        <li><a href="#">Order and Payment</a></li>
+                        <li><a href="#">Cancellation and Refund</a></li>
+                        <li><a href="#">Delivery Conditions</a></li>
+                        <li><a href="#">Secure shopping</a></li>
+                    </ul>
+                </div>
+
+                <!-- LEGAL -->
+                <div>
+                    <button
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        LEGAL
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Membership Agreement</a></li>
+                        <li><a href="#">Distance Selling Contract</a></li>
+                    </ul>
+                </div>
+
+                <!-- HELP CENTER -->
+                <div>
+                    <button
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        HELP CENTER
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Center</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Footer Links Grid -->
+            <div class="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-6 pb-10 md:pb-12">
+                <!-- Corporate -->
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">CORPORATE</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">About
+                                us</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Press</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Human
+                                resources</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">News
+                                from us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Shopping -->
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">SHOPPING</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Order
+                                and Payment</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Cancellation and
+                                Refund</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Delivery
+                                Conditions</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Secure
+                                shopping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">LEGAL</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Terms of
+                                Use</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="#"
+                                class="text-gray-600 hover:text-watsons-teal text-sm underline transition-colors">Membership
+                                Agreement</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Distance
+                                Selling Contract</a></li>
+                    </ul>
+                </div>
+
+                <!-- Help Center -->
+                <div>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">HELP CENTER</h4>
+                    <ul class="space-y-2 md:space-y-3">
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">FAQ</a>
+                        </li>
+                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Contact
+                                center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us -->
+                <div class="col-span-2 sm:col-span-3 md:col-span-1">
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">CONTACT US</h4>
+                    <ul class="space-y-3 md:space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-map-marker-alt text-gray-400 mt-1"></i>
+                            <span class="text-gray-600 text-sm">Saray Mah. Site Yolu Cad. Anel İş Merkezi, D:No:5/4,
+                                34768 Ümraniye/İstanbul</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-phone text-gray-400"></i>
+                            <a href="tel:08507559987"
+                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">0850 755
+                                9987</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-envelope text-gray-400"></i>
+                            <a href="mailto:info@watsons.com.tr"
+                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">info@watsons.com.tr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <!-- Copyright -->
+                    <p class="text-gray-500 text-xs md:text-sm text-center md:text-left">
+                        © WATSONS 2021 ALL RIGHTS RESERVED | A MEMBER OF CK HUTCHISON HOLDINGS
+                    </p>
+
+                    <!-- Social Media Icons -->
+                    <div class="flex items-center gap-3">
+                        <a href="#"
+                            class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-sky-400 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 rounded-full flex items-center justify-center transition-all shadow-md">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors shadow-md">
+                            <i class="fab fa-pinterest-p text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
