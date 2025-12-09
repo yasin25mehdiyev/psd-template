@@ -14,8 +14,12 @@
                     colors: {
                         'watsons-green': '#00a651',
                         'watsons-teal': '#0d9488',
+                        'watsons-light-secondary': '#0099A81A',
                         'watsons-pink': '#e91e8c',
                         'watsons-dark': '#1a1a2e',
+                        'watsons-light': '#FFFFFFE5',
+                        'watsons-smoke': '#ECECEC80',
+                        'watsons-blue': '#00106B'
                     }
                 }
             }
@@ -164,7 +168,7 @@
                     <span class="hidden sm:inline">Catalog</span>
                 </a>
             </div>
-            <p class="hidden lg:block text-gray-300 text-xs xl:text-sm">Watsons Beauty and Personal Care Awards
+            <p class="hidden md:block text-gray-300 text-xs xl:text-sm">Watsons Beauty and Personal Care Awards
                 Nominees!</p>
             <a href="tel:+908501234567" class="flex items-center gap-2 hover:text-gray-300 text-xs sm:text-sm">
                 <span class="hidden sm:inline">Call us:</span>
@@ -176,9 +180,9 @@
 
     <!-- Header -->
     <header class="py-3 md:py-4 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-2 md:gap-4 lg:gap-8">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-2 md:gap-4 md:gap-8">
             <!-- Mobile Menu Button -->
-            <button id="menuOpen" class="lg:hidden text-gray-600 text-xl">
+            <button id="menuOpen" class="md:hidden text-gray-600 text-xl">
                 <i class="fas fa-bars"></i>
             </button>
 
@@ -186,16 +190,16 @@
 
             <!-- Logo -->
             <div
-                class="bg-watsons-teal text-white font-bold text-lg md:text-xl lg:text-2xl px-3 md:px-4 lg:px-6 py-1.5 md:py-2 rounded-full italic whitespace-nowrap">
+                class="bg-watsons-teal text-white font-bold text-lg md:text-xl md:text-2xl px-3 md:px-4 md:px-6 py-1.5 md:py-2 rounded-full italic whitespace-nowrap">
                 watsons
             </div>
 
             <!-- Search Bar -->
-            <div class="hidden md:block flex-1 max-w-xl lg:max-w-2xl">
+            <div class="hidden md:block flex-1 max-w-xl md:max-w-2xl">
                 <div class="relative">
                     <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
                     <input type="text" placeholder="Write the product or category you are looking for"
-                        class="w-full pl-12 pr-4 py-2 lg:py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm lg:text-base">
+                        class="w-full pl-12 pr-4 py-2 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm md:text-base">
                 </div>
             </div>
 
@@ -207,10 +211,10 @@
             <!-- User & Cart -->
             <div class="flex items-center gap-2 md:gap-4">
                 <div class="hidden sm:flex items-center gap-2">
-                    <span class="hidden lg:inline text-gray-600 text-sm">Hello,</span>
-                    <span class="font-semibold text-sm lg:text-base">Clara</span>
-                    <img src="./image/user.jpg" alt="User" class="w-8 h-8 lg:w-10 lg:h-10 rounded-full object-cover">
-                    <i class="hidden lg:inline fas fa-chevron-down text-gray-400 text-sm"></i>
+                    <span class="hidden md:inline text-gray-600 text-sm">Hello,</span>
+                    <span class="font-semibold text-sm md:text-base">Clara</span>
+                    <img src="./image/user.jpg" alt="User" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover">
+                    <i class="hidden md:inline fas fa-chevron-down text-gray-400 text-sm"></i>
                 </div>
                 <!-- Mobile User Icon -->
                 <button class="sm:hidden text-gray-600 text-xl">
@@ -218,10 +222,10 @@
                 </button>
                 <div class="relative">
                     <a href="checkout.html" class="relative inline-block">
-                        <i class="fas fa-shopping-cart text-xl lg:text-2xl text-gray-600"></i>
+                        <i class="fas fa-shopping-cart text-xl md:text-2xl text-gray-600"></i>
 
                         <span class="absolute -top-2 -right-2 bg-watsons-pink text-white
-               text-xs w-4 h-4 lg:w-5 lg:h-5
+               text-xs w-4 h-4 md:w-5 md:h-5
                rounded-full flex items-center justify-center">
                             2
                         </span>
@@ -245,7 +249,7 @@
     <nav class="hidden md:block border-b-4 border-watsons-teal">
         <div class="max-w-7xl mx-auto px-4">
             <ul
-                class="flex items-center gap-4 md:gap-6 lg:justify-between py-3 md:py-4 text-xs md:text-sm font-medium text-gray-700 whitespace-nowrap min-w-max lg:min-w-0">
+                class="flex items-center gap-4 md:gap-6 md:justify-between py-3 md:py-4 text-xs md:text-sm font-medium text-gray-700 whitespace-nowrap min-w-max md:min-w-0">
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">CAMPAIGNS</a></li>
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">PERSONAL CARE</a></li>
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">SKIN CARE</a></li>
@@ -285,7 +289,7 @@
                         NATURALS BY WATSONS
                     </p>
 
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-5">
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800 mb-5">
                         The new 2021 collection
                     </h1>
 
@@ -371,7 +375,7 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                 <!-- Product 1 -->
                 <div
                     class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
@@ -480,14 +484,14 @@
     <!-- Newsletter Section -->
     <section class="py-8 md:py-12 bg-[#F2F0FF]">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <div class="text-center md:text-left">
-                    <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Sign up to our newsletter</h3>
-                    <p class="text-gray-500 text-sm md:text-base">Be the first to hear about the latest offers.</p>
+            <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-4 md:gap-6">
+                <div class="text-left">
+                    <h3 class="text-xl md:text-2xl font-bold text-[#2A2A48] mb-2 md:mb-4">Sign up to our newsletter</h3>
+                    <p class="text-[#2A2A4899] text-sm md:text-base">Be the first to hear about the latest offers.</p>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <div class="flex flex-row gap-3 w-full md:w-auto">
                     <input type="email" placeholder="Your email address"
-                        class="w-full sm:w-72 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-watsons-teal text-sm">
+                        class="w-full md:w-[412px] px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-watsons-teal text-sm">
                     <button
                         class="bg-watsons-pink text-white px-6 py-3 rounded-lg font-medium hover:bg-pink-600 transition-colors whitespace-nowrap text-sm md:text-base">
                         SUBSCRIBE
@@ -498,195 +502,192 @@
     </section>
 
     <!-- NIVEA Promo Banner -->
-    <section class="relative overflow-hidden bg-[#bfe4ea]">
-       <div
-    class="absolute inset-0
-           bg-[url('/image/overlay.png')]
-           bg-cover bg-center bg-no-repeat
-           z-0">
-  </div>
+    <section class="relative overflow-hidden w-full">
 
-        <div class="relative max-w-[1400px] mx-auto px-4 py-12 md:py-16">
-            <div class="relative isolate min-h-[320px] md:min-h-[460px]">
+        <!-- ✅ BACKGROUND PATTERN -->
+        <div class="absolute inset-0 
+    bg-[url('image/overlay.png')]
+    bg-cover bg-center bg-no-repeat
+    opacity-100 z-0">
+        </div>
 
-                <!-- LEFT IMAGE -->
-                <img src="./image/banner/nivea.png" alt="Nivea deodorants" class="
-          hidden md:block
-          absolute left-[20px] lg:left-[40px]
-          top-1/2 -translate-y-1/2
-          h-[220px] lg:h-[320px] xl:h-[380px]
-          z-10 pointer-events-none
-        " />
+        <!-- ✅ MAIN CONTAINER -->
+        <div class="relative max-w-7xl mx-auto px-4 py-10 md:py-14 z-10">
 
-                <!-- CENTER CARD -->
-                <div class="
-          absolute left-1/2 top-1/2
-          -translate-x-1/2 md:-translate-x-[35%]
-          -translate-y-1/2
-          bg-white rounded-[28px]
-          px-8 md:px-12
-          py-10 md:py-14
-          max-w-[320px] md:max-w-md
-          shadow-[0_24px_70px_rgba(0,0,0,0.18)]
-          z-20 text-center md:text-left
-        ">
-                    <p class="text-blue-900 text-xs md:text-sm font-semibold uppercase tracking-wide">
-                        EN SEVDİYİNİZ ÜRÜNLƏR
+            <div class="relative min-h-[280px] md:min-h-[420px] flex items-center justify-center">
+
+                <!-- ✅ LEFT PRODUCTS -->
+                <img src="./image/banner/nivea.png" class="hidden md:block
+        absolute md:left-6
+        bottom-0
+        md:h-[320px]
+        z-20 pointer-events-none" alt="" />
+
+                <!-- ✅ CENTER WHITE CARD -->
+                <div class="relative bg-white rounded-tl-[40px] rounded-br-[40px]
+        px-7 md:px-12
+        py-10 md:py-14
+        md:ml-10
+        shadow-sm
+        z-30 text-left">
+
+                    <p class="text-watsons-blue font-semibold uppercase tracking-wide">
+                        EN SEVDİĞİNİZ ÜRÜNLER
                     </p>
 
-                    <h2 class="text-blue-900 font-extrabold text-[22px] md:text-[26px] leading-tight mt-2">
+                    <h2 class="text-watsons-blue font-bold uppercase text-[20px]">
                         TEK TIKLA KAPINIZDA!
                     </h2>
 
-                    <div class="mt-6 md:mt-8">
-                        <p class="text-blue-900 font-extrabold text-[64px] md:text-[88px] leading-none">
+                    <div class="mt-3">
+                        <p class="text-watsons-blue uppercase font-extrabold text-[72px] leading-none">
                             60%
                         </p>
-                        <p class="text-blue-900 font-extrabold text-[28px] md:text-[36px] -mt-2">
+                        <p class="text-watsons-blue uppercase font-extrabold text-[34px]">
                             DISCOUNT
                         </p>
                     </div>
 
                     <button class="
-            mt-6 md:mt-8
-            bg-teal-500 hover:bg-teal-600
-            text-white px-8 md:px-10 py-3
-            rounded-md font-semibold uppercase
-            shadow-lg transition
-          ">
+          mt-6
+          bg-teal-500 hover:bg-teal-600
+          text-white px-8 py-3
+          rounded-md font-semibold uppercase
+          shadow-lg
+          transition-all duration-300 hover:scale-105 active:scale-95">
                         SHOP NOW
                     </button>
                 </div>
 
-                <!-- RIGHT IMAGE -->
-                <img src="./image/banner/niveaBanner.png" alt="Nivea products" class="
-          hidden sm:block
-          absolute right-[20px] lg:right-[40px]
-          top-1/2 -translate-y-1/2
-          h-[260px] md:h-[340px] lg:h-[400px] xl:h-[440px]
-          z-30 pointer-events-none
-        " />
+                <!-- ✅ RIGHT PRODUCTS -->
+                <img src="./image/banner/niveaBanner.png" class="hidden md:block
+        absolute md:bottom-0 
+        md:right-[170px]
+        md:h-[296px]
+        z-[99] pointer-events-none" alt="Nivea" />
 
             </div>
         </div>
     </section>
 
 
-
-
     <!-- Featured Categories Section -->
-<section class="py-10 md:py-16 bg-white">
-  <div class="max-w-7xl mx-auto px-4">
+    <section class="py-10 md:py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
 
-    <!-- Section title -->
-    <div class="flex items-center justify-center mb-8 md:mb-12">
-      <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
-      <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">
-        Featured categories
-      </h2>
-      <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
-    </div>
+            <!-- TITLE -->
+            <div class="flex items-center justify-center mb-10 md:mb-12">
+                <div class="flex-1 h-px bg-watsons-light-secondary mt-1.5"></div>
 
-    <!-- Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+                <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">
+                    Featured categories
+                </h2>
 
-      <!-- CARD -->
-      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
+                <div class="flex-1 h-px bg-watsons-light-secondary mt-1.5"></div>
+            </div>
 
-        <!-- IMAGE -->
-        <img
-          src="./image/backgrounds/bg1.jpg"
-          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-        >
+            <!-- ✅ GRID – 360px FIXED -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 justify-center">
 
-        <!-- ✅ SIMPLE BLACK OVERLAY -->
-        <div
-          class="absolute inset-0
-                 bg-black/0
-                 group-hover:bg-black/50
-                 transition-colors duration-300">
+                <!-- ✅ CARD 1 -->
+                <div class="group relative h-[260px] overflow-hidden cursor-pointer">
+                    <img src="./image/backgrounds/bg1.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-md border border-watsons-smoke" />
+
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                        <div class="bg-watsons-light rounded-xl px-6 py-5 text-center max-w-[232px] shadow-md">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Personal Care</h3>
+                            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetu elit aliquam</p>
+                            <button class="relative z-10 bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm
+  transition-all duration-300
+  hover:bg-teal-600 hover:scale-105 active:scale-95">
+                                BROWSE
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ✅ CARD 2 -->
+                <div class="group relative h-[260px] overflow-hidden cursor-pointer">
+                    <img src="./image/backgrounds/bg2.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-md border border-watsons-smoke" />
+
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                        <div class="bg-watsons-light rounded-xl px-6 py-5 text-center max-w-[232px] shadow-md">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Skin Care</h3>
+                            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetu elit aliquam</p>
+                            <button class="relative z-10 bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm
+  transition-all duration-300
+  hover:bg-teal-600 hover:scale-105 active:scale-95">
+                                BROWSE
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ✅ CARD 3 -->
+                <div class="group relative h-[260px] overflow-hidden cursor-pointer">
+                    <img src="./image/backgrounds/bg3.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-md border border-watsons-smoke" />
+
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                        <div class="bg-watsons-light rounded-xl px-6 py-5 text-center max-w-[232px] shadow-md">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Make-Up</h3>
+                            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetu elit aliquam</p>
+                            <button class="relative z-10 bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm
+  transition-all duration-300
+  hover:bg-teal-600 hover:scale-105 active:scale-95">
+                                BROWSE
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ✅ CARD 4 -->
+                <div class="group relative h-[260px] overflow-hidden cursor-pointer">
+                    <img src="./image/backgrounds/bg4.jpg"
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 rounded-md border border-watsons-smoke" />
+
+                    <div class="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors duration-300">
+                    </div>
+
+                    <div
+                        class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+
+                        <div class="bg-watsons-light rounded-xl px-6 py-5 text-center max-w-[232px] shadow-md">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Mother & Baby</h3>
+                            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetu elit aliquam</p>
+                            <button class="relative z-10 bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm
+  transition-all duration-300
+  hover:bg-teal-600 hover:scale-105 active:scale-95">
+                                BROWSE
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
-
-        <!-- CONTENT -->
-        <div
-          class="absolute inset-0 flex items-center justify-center
-                 opacity-100 md:opacity-0 md:group-hover:opacity-100
-                 transition-opacity duration-300">
-
-          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">
-              Personal Care
-            </h3>
-            <p class="text-gray-600 text-sm mb-4">
-              Lorem ipsum dolor sit amet consectetur elit aliquam
-            </p>
-            <button
-              class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm hover:bg-teal-700 transition">
-              BROWSE
-            </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
-        <img src="./image/backgrounds/bg2.jpg"
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
-
-        <div class="absolute inset-0 flex items-center justify-center
-                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Skin Care</h3>
-            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
-            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD -->
-      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
-        <img src="./image/backgrounds/bg3.jpg"
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
-
-        <div class="absolute inset-0 flex items-center justify-center
-                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Make-Up</h3>
-            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
-            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD -->
-      <div class="group relative h-64 md:h-80 rounded-xl overflow-hidden">
-        <img src="./image/backgrounds/bg4.jpg"
-             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-
-        <div class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300"></div>
-
-        <div class="absolute inset-0 flex items-center justify-center
-                    opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-          <div class="bg-white/85 rounded-lg px-6 py-5 text-center max-w-[80%] shadow-md">
-            <h3 class="text-lg md:text-xl font-semibold text-gray-800 mb-2">Mother & Baby</h3>
-            <p class="text-gray-600 text-sm mb-4">Lorem ipsum dolor sit amet consectetur elit aliquam</p>
-            <button class="bg-watsons-teal text-white px-5 py-2 rounded font-medium text-sm">BROWSE</button>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-
+    </section>
 
     <!-- Footer Section -->
     <footer class="bg-gray-50 pt-12 md:pt-16">
