@@ -12,6 +12,7 @@
             theme: {
                 extend: {
                     colors: {
+                        'watsons-light': '#FFFFFF',
                         'watsons-green': '#00a651',
                         'watsons-teal': '#0d9488',
                         'watsons-light-secondary': '#0099A81A',
@@ -19,7 +20,12 @@
                         'watsons-dark': '#1a1a2e',
                         'watsons-light': '#FFFFFFE5',
                         'watsons-smoke': '#ECECEC80',
-                        'watsons-blue': '#00106B'
+                        'watsons-light-smoke': '#ECECEC29',
+                        'watsons-blue': '#00106B',
+                        'watsons-coal': '#2A2A48',
+                        'watsons-graphene': '#485363',
+                        'watsons-darker': '#000000CC',
+                        'watsons-dark': '#000000'
                     }
                 }
             }
@@ -368,115 +374,218 @@
     <section class="py-10 md:py-16">
         <div class="max-w-7xl mx-auto px-4">
             <!-- Section Title -->
-            <div class="flex items-center justify-center mb-8 md:mb-12">
-                <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
-                <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">Featured products</h2>
-                <div class="hidden sm:block flex-1 h-px bg-gray-200"></div>
+            <div class="flex items-center justify-center mb-10 md:mb-12">
+                <div class="flex-1 h-px bg-watsons-light-secondary mt-1.5"></div>
+
+                <h2 class="text-xl md:text-2xl font-semibold text-watsons-teal px-4 md:px-8">
+                    Featured products
+                </h2>
+
+                <div class="flex-1 h-px bg-watsons-light-secondary mt-1.5"></div>
             </div>
 
             <!-- Products Grid -->
-            <div class="grid grid-cols-2 md:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            <div class="grid grid-cols-2 md:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6 cursor-pointer">
                 <!-- Product 1 -->
-                <div
-                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
-                    <div class="relative">
+                <div class="group relative border border-watsons-smoke rounded-md hover:shadow-lg transition-all">
+                    <div class="relative bg-watsons-light-smoke">
                         <img src="./image/product/product1.png" alt="Herbal Science Boom Butter"
-                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4" />
+
                         <!-- Hover Buttons -->
                         <div
-                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button
-                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <i class="far fa-eye"></i>
-                                Quick View
-                            </button>
-                            <button
-                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add
-                            </button>
+                            class="hidden md:flex absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-12 text-white bg-watsons-dark/80 hover:bg-watsons-dark/70 cursor-pointer">
+                            <div
+                                class="flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                                <span><i class="far fa-eye"></i></span>
+                                <span>Quick View</span>
+                            </div>
+                            <div
+                                class="relative flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2
+      h-8 w-[0.5px] bg-watsons-light-smoke">
+                                </span>
+
+
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                                <span>Add</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">44,95 TL</p>
-                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Herbal Science Boom Butter Hair Care Oil
-                        190 ml</p>
+
+                    <div class="p-4 md:p-8">
+                        <p class="text-base sm:text-lg md:text-xl font-bold text-watsons-coal mb-1 md:mb-2">44,95 TL</p>
+                        <div class="text-watsons-graphene">
+                            <p>Herbal Science Boom</p>
+                            <p>Butter Hair Care Oil 190 ml</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 block border-t border-watsons-smoke md:hidden">
+                        <button class="
+          bg-watsons-pink hover:bg-pink-600
+          text-white px-4 py-2 w-full
+          rounded-md font-bold uppercase
+          shadow-lg
+          transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-2">
+                            <span><i class="fas fa-shopping-cart"></i></span>
+                            <span class="uppercase">Add</span>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Product 2 -->
-                <div
-                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
-                    <div class="relative">
-                        <img src="./image/product/product2.png" alt="Diadermine Lift Serum"
-                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                <div class="group relative border border-watsons-smoke rounded-md hover:shadow-lg transition-all">
+                    <div class="relative bg-watsons-light-smoke">
+                        <img src="./image/product/product2.png" alt="Herbal Science Boom Butter"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4" />
+
+                        <!-- Hover Buttons -->
                         <!-- Hover Buttons -->
                         <div
-                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button
-                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <i class="far fa-eye"></i>
-                                Quick View
-                            </button>
-                            <button
-                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add
-                            </button>
+                            class="hidden md:flex absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-12 text-white bg-watsons-dark/80 hover:bg-watsons-dark/70 cursor-pointer">
+                            <div
+                                class="flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                                <span><i class="far fa-eye"></i></span>
+                                <span>Quick View</span>
+                            </div>
+                            <div
+                                class="relative flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2
+      h-8 w-[0.5px] bg-watsons-light-smoke">
+                                </span>
+
+
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                                <span>Add</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">42,25 TL</p>
-                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Diadermine Lift + Serum Booster Vitamin C
-                    </p>
+
+                    <div class="p-4 md:p-8">
+                        <p class="text-base sm:text-lg md:text-xl font-bold text-watsons-coal mb-1 md:mb-2">44,95 TL</p>
+                        <div class="text-watsons-graphene">
+                            <p>Herbal Science Boom</p>
+                            <p>Butter Hair Care Oil 190 ml</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 block border-t border-t-watsons-smoke md:hidden">
+                        <button class="
+          bg-watsons-pink hover:bg-pink-600
+          text-white px-4 py-2 w-full
+          rounded-md font-bold uppercase
+          shadow-lg
+          transition-all duration-300 hover:scale-105 active:scale-95">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD
+                        </button>
+                    </div>
                 </div>
+
 
                 <!-- Product 3 -->
-                <div
-                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
-                    <div class="relative">
-                        <img src="./image/product/product3.png" alt="Ashley Joy Shampoo"
-                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                <div class="group relative border border-watsons-smoke rounded-md hover:shadow-lg transition-all">
+                    <div class="relative bg-watsons-light-smoke">
+                        <img src="./image/product/product3.png" alt="Herbal Science Boom Butter"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4" />
+
                         <!-- Hover Buttons -->
                         <div
-                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button
-                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <i class="far fa-eye"></i>
-                                Quick View
-                            </button>
-                            <button
-                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add
-                            </button>
+                            class="hidden md:flex absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-12 text-white bg-watsons-dark/80 hover:bg-watsons-dark/70 cursor-pointer">
+                            <div
+                                class="flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                                <span><i class="far fa-eye"></i></span>
+                                <span>Quick View</span>
+                            </div>
+                            <div
+                                class="relative flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2
+      h-8 w-[0.5px] bg-watsons-light-smoke">
+                                </span>
+
+
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                                <span>Add</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">29,45 TL</p>
-                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Ashley Joy Strengthening Shampoo 400ml</p>
+
+                    <div class="p-4 md:p-8">
+                        <p class="text-base sm:text-lg md:text-xl font-bold text-watsons-coal mb-1 md:mb-2">44,95 TL</p>
+                        <div class="text-watsons-graphene">
+                            <p>Herbal Science Boom</p>
+                            <p>Butter Hair Care Oil 190 ml</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 block border-t border-t-watsons-smoke md:hidden">
+                        <button class="
+          bg-watsons-pink hover:bg-pink-600
+          text-white px-4 py-2 w-full
+          rounded-md font-bold uppercase
+          shadow-lg
+          transition-all duration-300 hover:scale-105 active:scale-95">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD
+                        </button>
+                    </div>
                 </div>
 
+
                 <!-- Product 4 -->
-                <div
-                    class="group relative border border-gray-200 rounded-lg p-3 sm:p-4 md:p-6 hover:shadow-lg transition-all">
-                    <div class="relative">
-                        <img src="./image/product/product4.png" alt="Herbal Extract Shampoo"
-                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4">
+                <div class="group relative border border-watsons-smoke rounded-md hover:shadow-lg transition-all">
+                    <div class="relative bg-watsons-light-smoke">
+                        <img src="./image/product/product4.png" alt="Herbal Science Boom Butter"
+                            class="w-full h-32 sm:h-40 md:h-48 object-contain mb-3 md:mb-4" />
+
                         <!-- Hover Buttons -->
                         <div
-                            class="absolute bottom-0 left-0 right-0 flex opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <button
-                                class="flex-1 bg-gray-800 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-900 transition-colors flex items-center justify-center gap-2">
-                                <i class="far fa-eye"></i>
-                                Quick View
-                            </button>
-                            <button
-                                class="flex-1 bg-gray-700 text-white py-2 text-xs sm:text-sm font-semibold hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
-                                <i class="fas fa-shopping-cart"></i>
-                                Add
-                            </button>
+                            class="hidden md:flex absolute bottom-0 left-0 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 h-12 text-white bg-watsons-dark/80 hover:bg-watsons-dark/70 cursor-pointer">
+                            <div
+                                class="flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                                <span><i class="far fa-eye"></i></span>
+                                <span>Quick View</span>
+                            </div>
+                            <div
+                                class="relative flex-1 py-2 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+
+                                <span class="absolute left-0 top-1/2 -translate-y-1/2
+      h-8 w-[0.5px] bg-watsons-light-smoke">
+                                </span>
+
+
+                                <span><i class="fas fa-shopping-cart"></i></span>
+                                <span>Add</span>
+                            </div>
                         </div>
                     </div>
-                    <p class="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1 md:mb-2">28,95 TL</p>
-                    <p class="text-gray-600 text-xs sm:text-sm line-clamp-2">Herbal Extract Refreshing Shampoo 400ml</p>
+
+                    <div class="p-4 md:p-8">
+                        <p class="text-base sm:text-lg md:text-xl font-bold text-watsons-coal mb-1 md:mb-2">44,95 TL</p>
+                        <div class="text-watsons-graphene">
+                            <p>Herbal Science Boom</p>
+                            <p>Butter Hair Care Oil 190 ml</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 block border-t border-t-watsons-smoke md:hidden">
+                        <button class="
+          bg-watsons-pink hover:bg-pink-600
+          text-white px-4 py-2 w-full
+          rounded-md font-bold uppercase
+          shadow-lg
+          transition-all duration-300 hover:scale-105 active:scale-95">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            ADD
+                        </button>
+                    </div>
                 </div>
+
+
             </div>
         </div>
     </section>
@@ -486,7 +595,8 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-4 md:gap-6">
                 <div class="text-left">
-                    <h3 class="text-xl md:text-2xl font-bold text-[#2A2A48] mb-2 md:mb-4">Sign up to our newsletter</h3>
+                    <h3 class="text-xl md:text-2xl font-bold text-watsons-coal mb-2 md:mb-4">Sign up to our newsletter
+                    </h3>
                     <p class="text-[#2A2A4899] text-sm md:text-base">Be the first to hear about the latest offers.</p>
                 </div>
                 <div class="flex flex-row gap-3 w-full md:w-auto">
