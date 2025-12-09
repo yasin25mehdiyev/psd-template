@@ -273,23 +273,23 @@
     <!-- Hero Slider -->
     <!-- Made hero section stack vertically on mobile -->
     <section class="bg-[#F2F0FF] relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 relative">
-
-            <!-- LEFT ARROW -->
-            <button class="hidden absolute -left-11 top-1/2 -translate-y-1/2 z-30
+        <!-- LEFT ARROW -->
+        <button class="hidden absolute left-11 top-1/2 -translate-y-1/2 z-30
                    w-12 h-12 md:flex items-center justify-center
                    text-watsons-graphene/80 hover:text-watsons-graphene">
-                <i class="fas fa-chevron-left text-xl md:text-2xl"></i>
-            </button>
+            <i class="fas fa-chevron-left text-xl md:text-2xl"></i>
+        </button>
 
-            <!-- RIGHT ARROW -->
-            <button class="hidden absolute right-4 top-1/2 -translate-y-1/2 z-30
+        <!-- RIGHT ARROW -->
+        <button class="hidden absolute right-11 top-1/2 -translate-y-1/2 z-30
                    w-12 h-12 md:flex items-center justify-center
                    text-watsons-graphene/80 hover:text-watsons-graphene">
-                <i class="fas fa-chevron-right text-xl md:text-2xl"></i>
-            </button>
+            <i class="fas fa-chevron-right text-xl md:text-2xl"></i>
+        </button>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 px-6 md:px-10">
+
+        <div class="max-w-7xl mx-auto py-12 md:py-16 relative">
+            <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-4 px-6">
 
                 <!-- LEFT TEXT -->
                 <div class="text-left order-2 md:order-1">
@@ -319,7 +319,7 @@
                 </div>
 
                 <!-- RIGHT IMAGE -->
-                <div class="order-1 md:order-2 flex justify-center">
+                <div class="order-1 md:order-2 flex justify-center md:justify-end">
                     <img src="image/slider/slider-right.png" alt="Slider Image"
                         class="max-w-[280px] md:max-w-[420px] object-contain" />
                 </div>
@@ -763,20 +763,20 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-50 pt-12 md:pt-16">
+    <footer class="pt-8 md:pt-12">
         <div class="max-w-7xl mx-auto px-4">
 
             <!-- MOBILE FOOTER ACCORDION -->
-            <div class="md:hidden divide-y border-t border-gray-200">
+            <div class="md:hidden divide-y border-b border-watsons-smoke">
 
                 <!-- CORPORATE -->
                 <div>
                     <button
-                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-medium text-watsons-coal">
                         CORPORATE
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
-                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-watsons-graphene">
                         <li><a href="#">About us</a></li>
                         <li><a href="#">Press</a></li>
                         <li><a href="#">Human resources</a></li>
@@ -787,11 +787,11 @@
                 <!-- SHOPPING -->
                 <div>
                     <button
-                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-medium text-watsons-coal">
                         SHOPPING
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
-                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-watsons-graphene">
                         <li><a href="#">Order and Payment</a></li>
                         <li><a href="#">Cancellation and Refund</a></li>
                         <li><a href="#">Delivery Conditions</a></li>
@@ -802,11 +802,11 @@
                 <!-- LEGAL -->
                 <div>
                     <button
-                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-medium text-watsons-coal">
                         LEGAL
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
-                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-watsons-graphene">
                         <li><a href="#">Terms of Use</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Membership Agreement</a></li>
@@ -817,11 +817,11 @@
                 <!-- HELP CENTER -->
                 <div>
                     <button
-                        class="footer-toggle w-full flex justify-between items-center py-4 font-semibold text-gray-800">
+                        class="footer-toggle w-full flex justify-between items-center py-4 font-medium text-watsons-coal">
                         HELP CENTER
                         <i class="fas fa-chevron-down transition-transform"></i>
                     </button>
-                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-gray-600">
+                    <ul class="footer-content hidden pb-4 space-y-2 text-sm text-watsons-graphene">
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">Contact Center</a></li>
                     </ul>
@@ -830,123 +830,158 @@
             </div>
 
             <!-- Footer Links Grid -->
-            <div class="hidden md:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 md:gap-6 pb-10 md:pb-12">
+            <div class="hidden md:grid md:grid-cols-6 gap-10 pb-10 md:pb-12">
                 <!-- Corporate -->
                 <div>
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">CORPORATE</h4>
+                    <h4 class="font-medium text-watsons-coal text-sm text-base mb-8">CORPORATE</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">About
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">About
                                 us</a></li>
                         <li><a href="#"
-                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Press</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Human
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Press</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Human
                                 resources</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">News
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">News
                                 from us</a></li>
                     </ul>
                 </div>
 
                 <!-- Shopping -->
                 <div>
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">SHOPPING</h4>
+                    <h4 class="font-medium text-watsons-coal text-sm md:text-base mb-8">SHOPPING</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Order
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Order
                                 and Payment</a></li>
                         <li><a href="#"
-                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Cancellation and
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Cancellation
+                                and
                                 Refund</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Delivery
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Delivery
                                 Conditions</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Secure
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Secure
                                 shopping</a></li>
                     </ul>
                 </div>
 
                 <!-- Legal -->
                 <div>
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">LEGAL</h4>
+                    <h4 class="font-medium text-watsons-coal text-sm text-base mb-8">LEGAL</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Terms of
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Terms
+                                of
                                 Use</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Privacy
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Privacy
                                 Policy</a></li>
                         <li><a href="#"
-                                class="text-gray-600 hover:text-watsons-teal text-sm underline transition-colors">Membership
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Membership
                                 Agreement</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Distance
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Distance
                                 Selling Contract</a></li>
                     </ul>
                 </div>
 
                 <!-- Help Center -->
                 <div>
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">HELP CENTER</h4>
+                    <h4 class="font-medium text-watsons-coal text-sm text-base mb-8">HELP CENTER</h4>
                     <ul class="space-y-2 md:space-y-3">
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">FAQ</a>
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">FAQ</a>
                         </li>
-                        <li><a href="#" class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">Contact
+                        <li><a href="#"
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">Contact
                                 center</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Us -->
-                <div class="col-span-2 sm:col-span-3 md:col-span-1">
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base mb-4 md:mb-6">CONTACT US</h4>
-                    <ul class="space-y-3 md:space-y-4">
+                <div class="col-span-2">
+                    <h4 class="font-medium text-watsons-coal text-sm text-base mb-8">CONTACT US</h4>
+                    <ul class="space-y-4">
                         <li class="flex items-start gap-3">
                             <i class="fas fa-map-marker-alt text-gray-400 mt-1"></i>
-                            <span class="text-gray-600 text-sm">Saray Mah. Site Yolu Cad. Anel İş Merkezi, D:No:5/4,
+                            <span
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm cursor-pointer hover:underline">Saray
+                                Mah. Site Yolu Cad. Anel İş Merkezi, D:No:5/4,
                                 34768 Ümraniye/İstanbul</span>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-phone text-gray-400"></i>
                             <a href="tel:08507559987"
-                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">0850 755
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">0850
+                                755
                                 9987</a>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fas fa-envelope text-gray-400"></i>
                             <a href="mailto:info@watsons.com.tr"
-                                class="text-gray-600 hover:text-watsons-teal text-sm transition-colors">info@watsons.com.tr</a>
+                                class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm transition-colors hover:underline">info@watsons.com.tr</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
 
+
+
         <!-- Bottom Bar -->
-        <div class="border-t border-gray-200">
+        <div class="border-t border-watsons-smoke">
             <div class="max-w-7xl mx-auto px-4 py-6">
                 <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                    <!-- Copyright -->
-                    <p class="text-gray-500 text-xs md:text-sm text-center md:text-left">
-                        © WATSONS 2021 ALL RIGHTS RESERVED | A MEMBER OF CK HUTCHISON HOLDINGS
-                    </p>
 
-                    <!-- Social Media Icons -->
-                    <div class="flex items-center gap-3">
+                    <!-- TEXT HİSSƏ -->
+                    <div class="md:flex items-center gap-2 order-2 md:order-1">
+                        <span
+                            class="text-watsons-grey text-xs md:text-sm text-center md:text-left block md:inline mb-2 md:mb-0">
+                            © WATSONS 2021 ALL RIGHTS RESERVED
+                        </span>
+
+                        <span class="text-watsons-grey text-sm hidden md:block">|</span>
+
+                        <span class="text-watsons-grey text-xs md:text-sm text-center md:text-left block md:inline">
+                            A MEMBER OF CK HUTCHISON HOLDINGS
+                        </span>
+                    </div>
+
+                    <!-- SOCIAL MEDIA (MOBILE-DƏ YUXARI) -->
+                    <div class="flex items-center gap-3 order-1 md:order-2">
                         <a href="#"
                             class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
+
                         <a href="#"
                             class="w-10 h-10 bg-sky-400 hover:bg-sky-500 rounded-full flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-twitter text-white"></i>
                         </a>
+
                         <a href="#"
                             class="w-10 h-10 bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 hover:from-purple-700 hover:via-pink-700 hover:to-orange-600 rounded-full flex items-center justify-center transition-all shadow-md">
                             <i class="fab fa-instagram text-white"></i>
                         </a>
+
                         <a href="#"
                             class="w-10 h-10 bg-red-600 hover:bg-red-700 rounded-full flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-youtube text-white"></i>
                         </a>
+
                         <a href="#"
                             class="w-10 h-10 bg-red-500 hover:bg-red-600 rounded-full flex items-center justify-center transition-colors shadow-md">
                             <i class="fab fa-pinterest-p text-white"></i>
                         </a>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </footer>
