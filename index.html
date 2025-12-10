@@ -27,7 +27,9 @@
                         'watsons-darker': '#000000CC',
                         'watsons-dark': '#000000',
                         'watsons-dark-grey': "#505357",
-                        'watsons-grey': '#8493A8'
+                        'watsons-grey': '#8493A8',
+                        'watsons-error': '#FA4C44',
+                        'watsons-titan': '#F2F0FF'
                     }
                 }
             }
@@ -41,20 +43,20 @@
     <div id="mobileMenuWrapper" class="fixed inset-0 z-[999] hidden">
 
         <!-- OVERLAY -->
-        <div id="menuOverlay" class="absolute inset-0 bg-black/40"></div>
+        <div id="menuOverlay" class="absolute inset-0 bg-watsons-light"></div>
 
         <!-- MENU PANEL -->
         <div id="mobileMenu" class="absolute left-0 top-0 h-full w-full
-           bg-white -translate-x-full transition-transform duration-300
+           bg-watsons-light -translate-x-full transition-transform duration-300
            flex flex-col">
 
             <!-- HEADER -->
-            <div class="flex items-center px-5 py-4 border-b bg-[#F2F0FF]">
+            <div class="flex items-center p-4 border-b bg-watsons-titan">
                 <button id="menuClose">
-                    <i class="fas fa-times text-2xl text-gray-700"></i>
+                    <i class="fas fa-times text-2xl text-watsons-graphene font-extrabold"></i>
                 </button>
 
-                <span class="ml-auto text-[22px] font-semibold text-gray-900">
+                <span class="ml-auto text-lg font-medium text-watsons-coal">
                     Menu
                 </span>
             </div>
@@ -64,123 +66,103 @@
             <nav class="flex-1 overflow-hidden relative">
 
                 <!-- LEVEL 1 -->
-                <ul id="menuLevel1" class="absolute inset-0 flex flex-col divide-y
-         text-base font-medium text-gray-800
-         transition-transform duration-300">
+                <ul id="menuLevel1" class="absolute inset-0 flex flex-col divide-y font-medium transition-transform duration-300">
 
-                    <li data-key="campaigns" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Campaigns</span>
+                    <li data-key="campaigns" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Campaigns</span>
                         </button>
                     </li>
 
-                    <li data-key="personal" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Personal Care</span>
+                    <li data-key="personal" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Personal Care</span>
                         </button>
                     </li>
 
-                    <li data-key="skin" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Skin Care</span>
+                    <li data-key="skin" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Skin Care</span>
                         </button>
                     </li>
 
-                    <li data-key="makeup" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Make-Up</span>
+                    <li data-key="makeup" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Make-Up</span>
                         </button>
                     </li>
 
-                    <li data-key="mother" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Mother & Baby</span>
+                    <li data-key="mother" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Mother & Baby</span>
                         </button>
                     </li>
 
-                    <li data-key="healthy" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Healthy Life</span>
+                    <li data-key="healthy" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Healthy Life</span>
                         </button>
                     </li>
 
-                    <li data-key="brands" class="menu-item">
-                        <button class="w-full flex items-center px-6 py-5">
-                            <i class="fas fa-chevron-left text-gray-400"></i>
-                            <span class="ml-auto text-lg">Brands</span>
+                    <li data-key="brands" class="menu-item p-4">
+                        <button class="w-full flex items-center">
+                            <span><i class="fas fa-chevron-left text-watsons-graphene"></i></span>
+                            <span class="ml-auto text-lg text-watsons-coal">Brands</span>
                         </button>
                     </li>
 
                 </ul>
-
-                <!-- LEVEL 2 -->
-                <div id="menuLevel2" class="absolute inset-0 bg-white translate-x-full
-               transition-transform duration-300">
-
-                    <!-- SUB HEADER -->
-                    <div class="flex items-center gap-3 px-5 py-4 bg-[#ECECEC4D] border-b">
-                        <button id="submenuBack">
-                            <i class="fas fa-chevron-left text-gray-700"></i>
-                        </button>
-                        <span id="submenuTitle" class="ml-auto font-semibold text-gray-800"></span>
-                        <div class="w-6"></div>
-                    </div>
-
-                    <!-- SUB ITEMS -->
-                    <ul id="submenuItems" class="flex flex-col px-4 py-2
-                 text-base text-gray-700">
-                    </ul>
-                </div>
             </nav>
 
             <!-- FOOTER -->
-            <div class="border-t divide-y text-gray-700 text-sm">
-                <div class="flex items-center justify-between px-6 py-4">
+            <div class="bg-watsons-smoke/30 divide-y text-watsons-graphene text-sm">
+                <div class="flex items-center justify-end gap-4 p-4 font-medium">
                     <span>My profile</span>
-                    <i class="far fa-user"></i>
+                    <span><i class="far fa-user"></i></span>
                 </div>
-                <div class="flex items-center justify-between px-6 py-4">
+                <div class="flex items-center justify-end gap-4 p-4 font-medium">
                     <span>Order history</span>
-                    <i class="fas fa-shopping-bag"></i>
+                    <span><i class="fas fa-shopping-bag"></i></span>
                 </div>
-                <div class="flex items-center justify-between px-6 py-4">
+                <div class="flex items-center justify-end gap-4 p-4 font-medium">
                     <span>Help center</span>
-                    <i class="far fa-question-circle"></i>
+                    <span><i class="far fa-question-circle"></i></span>
                 </div>
-                <div class="flex items-center justify-between px-6 py-4">
+                <div class="flex items-center justify-end gap-4 p-4 font-medium">
                     <span>Log out</span>
-                    <i class="fas fa-sign-out-alt"></i>
+                    <span><i class="fas fa-sign-out-alt"></i></span>
                 </div>
             </div>
-
         </div>
     </div>
 
-
     <!-- Top Bar -->
-    <div class="bg-watsons-dark text-white text-sm py-2">
+    <div class="bg-watsons-dark-grey text-white text-sm py-2">
         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
-            <div class="flex items-center gap-3 md:gap-6">
-                <a href="#" class="flex items-center gap-1 md:gap-2 hover:text-gray-300">
-                    <i class="fas fa-store"></i>
-                    <span class="hidden sm:inline">Stores</span>
+            <div class="flex items-center gap-2">
+                <a href="#" class="flex items-center gap-2 px-4 hover:text-watsons-light/90">
+                    <span><i class="fas fa-store"></i></span>
+                    <span class="text-sm">Stores</span>
                 </a>
-                <a href="#" class="flex items-center gap-1 md:gap-2 hover:text-gray-300">
-                    <i class="far fa-newspaper"></i>
-                    <span class="hidden sm:inline">Catalog</span>
+                <a href="#" class="flex items-center gap-2 px-4 hover:text-watsons-light/90">
+                    <span><i class="far fa-newspaper"></i></span>
+                    <span class="text-sm">Catalog</span>
                 </a>
             </div>
-            <p class="hidden md:block text-gray-300 text-xs xl:text-sm">Watsons Beauty and Personal Care Awards
-                Nominees!</p>
-            <a href="tel:+908501234567" class="flex items-center gap-2 hover:text-gray-300 text-xs sm:text-sm">
-                <span class="hidden sm:inline">Call us:</span>
-                <span class="hidden md:inline">(+90) 850 123 45 67</span>
+
+            <div class="hidden md:block">
+                <p class="text-watsons-smoke text-sm">
+                    Watsons Beauty and Personal Care Awards Nominees!</p>
+            </div>
+
+            <a href="tel:+908501234567" class="flex items-center gap-2 hover:text-watsons-light/90 text-sm font-medium">
+                <span class="hidden sm:inline">Call us: (+90) 850 123 45 67</span>
                 <i class="fas fa-phone"></i>
             </a>
         </div>
@@ -189,75 +171,62 @@
     <!-- Header -->
     <header class="py-3 md:py-4 border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 flex items-center justify-between gap-2 md:gap-4 md:gap-8">
-            <!-- Mobile Menu Button -->
-            <button id="menuOpen" class="md:hidden text-gray-600 text-xl">
-                <i class="fas fa-bars"></i>
-            </button>
+            <img src="image/logo.png" alt="Logo" class="object-contain h-full">
 
-
-
-            <!-- Logo -->
-            <div
-                class="bg-watsons-teal text-white font-bold text-lg md:text-xl md:text-2xl px-3 md:px-4 md:px-6 py-1.5 md:py-2 rounded-full italic whitespace-nowrap">
-                watsons
-            </div>
-
-            <!-- Search Bar -->
-            <div class="hidden md:block flex-1 max-w-xl md:max-w-2xl">
+            <div class="hidden md:block flex items-center justify-center max-w-2xl">
                 <div class="relative">
-                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-watsons-grey/40"></i>
                     <input type="text" placeholder="Write the product or category you are looking for"
-                        class="w-full pl-12 pr-4 py-2 md:py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm md:text-base">
+                        class="bg-watsons-smoke/30 min-w-[560px] min-h-[42px] pl-10 pr-4 border border-watsons-smoke/30 rounded-[32px] focus:outline-none focus:border-grey text-sm" />
                 </div>
             </div>
 
-            <!-- Mobile Search Icon -->
-            <button class="md:hidden text-gray-600 text-xl">
-                <i class="fas fa-search"></i>
-            </button>
+            <div class="flex items-center gap-8 md:gap-4">
+                <div class="flex items-center justify-center gap-8">
+                    <div class="hidden sm:flex items-center gap-4 cursor-pointer">
+                        <div class="flex items-center justify-center gap-4">
+                            <div>
+                                <span class="text-watsons-grey text-sm">Hello,</span>
+                                <span class="font-medium text-sm">Clara</span>
+                            </div>
+                            <img src="./image/user.jpg" alt="User"
+                                class="w-9 h-9 rounded-full object-cover" />
+                        </div>
 
-            <!-- User & Cart -->
-            <div class="flex items-center gap-2 md:gap-4">
-                <div class="hidden sm:flex items-center gap-2">
-                    <span class="hidden md:inline text-gray-600 text-sm">Hello,</span>
-                    <span class="font-semibold text-sm md:text-base">Clara</span>
-                    <img src="./image/user.jpg" alt="User" class="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover">
-                    <i class="hidden md:inline fas fa-chevron-down text-gray-400 text-sm"></i>
-                </div>
-                <!-- Mobile User Icon -->
-                <button class="sm:hidden text-gray-600 text-xl">
-                    <i class="fas fa-user"></i>
-                </button>
-                <div class="relative">
-                    <a href="checkout.html" class="relative inline-block">
-                        <i class="fas fa-shopping-cart text-xl md:text-2xl text-gray-600"></i>
-
-                        <span class="absolute -top-2 -right-2 bg-watsons-pink text-white
-               text-xs w-4 h-4 md:w-5 md:h-5
-               rounded-full flex items-center justify-center">
-                            2
+                        <span>
+                            <i class="fas fa-chevron-down text-watsons-grey/40 text-sm"></i>
                         </span>
-                    </a>
+                    </div>
 
+                    <button class="md:hidden text-watsons-graphene text-lg">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="relative">
+                        <a href="checkout.html" class="relative inline-block">
+                            <i class="fas fa-shopping-cart text-lg text-watsons-graphene"></i>
+
+                            <span class="absolute -top-2 -right-2 bg-watsons-error text-white font-bold text-[12px] w-4 h-4 rounded-[40px] flex items-center justify-center">
+                                2
+                            </span>
+                        </a>
+
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Mobile Search Bar -->
-        <div class="md:hidden px-4 mt-3">
-            <div class="relative">
-                <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                <input type="text" placeholder="Search products..."
-                    class="w-full pl-12 pr-4 py-2.5 border border-gray-200 rounded-lg focus:outline-none focus:border-watsons-teal text-sm">
+                <!-- Mobile Menu Button -->
+                <button id="menuOpen" class="md:hidden text-gray-600 text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
 
     <!-- Navigation -->
-    <nav class="hidden md:block border-b-4 border-watsons-teal">
+    <nav class="hidden md:block">
         <div class="max-w-7xl mx-auto px-4">
             <ul
-                class="flex items-center gap-4 md:gap-6 md:justify-between py-3 md:py-4 text-xs md:text-sm font-medium text-gray-700 whitespace-nowrap min-w-max md:min-w-0">
+                class="flex items-center gap-9 md:justify-between py-4 px-3 text-xs md:text-sm font-bold text-watsons-coal whitespace-nowrap min-w-max md:min-w-0">
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">CAMPAIGNS</a></li>
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">PERSONAL CARE</a></li>
                 <li><a href="#" class="hover:text-watsons-teal transition-colors">SKIN CARE</a></li>
@@ -272,7 +241,7 @@
 
     <!-- Hero Slider -->
     <!-- Made hero section stack vertically on mobile -->
-    <section class="bg-[#F2F0FF] relative overflow-hidden">
+    <section class="bg-watsons-titan relative overflow-hidden">
         <!-- LEFT ARROW -->
         <button class="hidden absolute left-11 top-1/2 -translate-y-1/2 z-30
                    w-12 h-12 md:flex items-center justify-center
@@ -328,10 +297,6 @@
 
         </div>
     </section>
-
-
-
-
 
     <!-- Featured Products -->
     <!-- Made products grid responsive with 1-2-4 columns -->
@@ -555,7 +520,7 @@
     </section>
 
     <!-- Newsletter Section -->
-    <section class="py-8 md:py-12 bg-[#F2F0FF]">
+    <section class="py-8 md:py-12 bg-watsons-titan">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-col md:flex-row items-start md:items-center md:justify-between gap-4 md:gap-6">
                 <div class="text-left">
@@ -908,7 +873,7 @@
                     <h4 class="font-medium text-watsons-coal text-sm text-base mb-8">CONTACT US</h4>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-gray-400 mt-1"></i>
+                            <i class="fas fa-map-marker-alt text-watsons-graphene mt-1"></i>
                             <span
                                 class="text-watsons-graphene hover:text-watsons-graphene/75 text-sm cursor-pointer hover:underline">Saray
                                 Mah. Site Yolu Cad. Anel İş Merkezi, D:No:5/4,
